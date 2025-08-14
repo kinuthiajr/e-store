@@ -7,9 +7,13 @@ namespace Duka.Domain.Products
 {
     public interface IProductRepository
     {
-        Task<Product?> GetProductByIdAsync(int id);
-        Task UpdateProductAsync(Product product);
-        Task AddProductAsync(Product product);
-        Task DeleteProductAsync(int id);
+        Task<Product?> GetByIdAsync(int id);
+    
+        Task AddAsync(Product product);
+    
+        Task UpdateAsync(Product product);
+    
+        Task DeleteAsync(int id);
+    
     }
 }
